@@ -4,7 +4,6 @@ import json
 import os
 
 app = Flask(__name__)
-app.secret_key = "replace-this-with-a-secure-key"
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "content.json")
 
@@ -65,6 +64,10 @@ def quiz(question_id):
     question = next((item for item in data["quiz"] if item["id"] == question_id), None)
     if question is None:
         return redirect(url_for("quiz", question_id=1))
+
+    if request.method == "GET" and question_id == 1:
+        session["activity"]["quiz_answers"] = []
+        session.modified = True
 
     if request.method == "POST":
         selected = request.form.get("choice")

@@ -50,39 +50,58 @@
   "quiz": [
     {
       "id": 1,
-      "question": "This excerpt features a bright trumpet theme and rapid ornamented lines that feel dramatic and detailed. Which era does it most likely represent?",
-      "audio": "https://www.youtube.com/embed/ZcS4t0QV_j0",
+      "question": "This piece features sweeping melodies, lush orchestration, and emotional depth. What era does it most likely belong to?",
+      "audio": "https://www.youtube.com/embed/OSVSlddJMn8?start=8",
       "options": [
         "Baroque",
         "Classical",
-        "Romantic",
-        "Modern"
+        "Romantic"
       ],
-      "correct_answer": "Baroque"
+      "correct_answer": "Romantic"
     },
     {
       "id": 2,
-      "question": "The music is elegant with a graceful melody, tidy phrasing, and a calm, regular rhythm. Which era has this style?",
-      "audio": "https://www.youtube.com/embed/5xTZt7g54x8",
+      "question": "This piece showcases clear structure, balanced melodies, and elegant phrasing. What era does it most likely belong to?",
+      "audio": "https://www.youtube.com/embed/z_4jMxbwmVc?start=5",
       "options": [
-        "Romantic",
-        "Classical",
         "Baroque",
-        "Contemporary"
+        "Classical",
+        "Romantic"
       ],
       "correct_answer": "Classical"
     },
     {
       "id": 3,
-      "question": "This piece builds with dramatic emotion, lush harmonies, and a sweeping orchestral sound. Which era is the best fit?",
-      "audio": "https://www.youtube.com/embed/7X8j3xHqu7o",
+      "question": "This piece demonstrates intricate polyphony, ornamentation, and contrapuntal complexity. What era does it most likely belong to?",
+      "audio": "https://www.youtube.com/embed/mGQLXRTl3Z0?start=10",
       "options": [
-        "Classical",
         "Baroque",
-        "Minimalist",
+        "Classical",
+        "Romantic"
+      ],
+      "correct_answer": "Baroque"
+    },
+    {
+      "id": 4,
+      "question": "This piece bursts with virtuosic piano passages, dramatic contrasts, and expressive nationalism. What era does it most likely belong to?",
+      "audio": "https://www.youtube.com/embed/LdH1hSWGFGU?start=7",
+      "options": [
+        "Baroque",
+        "Classical",
         "Romantic"
       ],
       "correct_answer": "Romantic"
+    },
+    {
+      "id": 5,
+      "question": "This piece highlights fast, virtuosic passages, ritornello form, and lively rhythms. What era does it most likely belong to?",
+      "audio": "https://www.youtube.com/embed/46w3KOy_ros?start=4",
+      "options": [
+        "Baroque",
+        "Classical",
+        "Romantic"
+      ],
+      "correct_answer": "Baroque"
     }
   ]
 }
