@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import json
 import os
@@ -19,7 +19,7 @@ def _init_session():
     session["activity"] = {
         "learn_entries": [],
         "quiz_answers": [],
-        "started_at": datetime.utcnow().isoformat() + "Z",
+        "started_at": datetime.now(timezone.utc).isoformat() + "Z",
     }
 
 
@@ -41,7 +41,7 @@ def learn(lesson_id):
     entry = {
         "lesson_id": lesson_id,
         "title": lesson["title"],
-        "entered_at": datetime.utcnow().isoformat() + "Z",
+        "entered_at": datetime.now(timezone.utc).isoformat() + "Z",
     }
     session["activity"]["learn_entries"].append(entry)
     session.modified = True
@@ -72,7 +72,7 @@ def quiz(question_id):
             "question_id": question_id,
             "selected": selected,
             "correct_answer": question["correct_answer"],
-            "answered_at": datetime.utcnow().isoformat() + "Z",
+            "answered_at": datetime.now(timezone.utc).isoformat() + "Z",
         }
         session["activity"]["quiz_answers"].append(entry)
         session.modified = True
@@ -83,7 +83,7 @@ def quiz(question_id):
 
     session["activity"]["quiz_answers"].append({
         "question_id": question_id,
-        "entered_at": datetime.utcnow().isoformat() + "Z",
+        "entered_at": datetime.now(timezone.utc).isoformat() + "Z",
     })
     session.modified = True
 

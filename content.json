@@ -4,7 +4,12 @@
       "id": 1,
       "title": "Baroque Era",
       "subtitle": "An ornate world of drama, counterpoint, and trumpet fanfares.",
-      "audio": "https://www.youtube.com/embed/ZcS4t0QV_j0",
+      "audios": [
+        "https://www.youtube.com/embed/Czsd13Mmcg0?start=7",
+        "https://www.youtube.com/embed/GRxofEmo3HA?start=1",
+        "https://www.youtube.com/embed/Ptk_1Dc2iPY?start=2"
+        
+      ],
       "traits": [
         "Rich ornamentation and complex polyphonic textures.",
         "Strong contrasts and dramatic dynamics.",
@@ -15,7 +20,11 @@
       "id": 2,
       "title": "Classical Era",
       "subtitle": "Balanced phrasing, clear structure, and elegant melodies.",
-      "audio": "https://www.youtube.com/embed/5xTZt7g54x8",
+      "audios": [
+        "https://www.youtube.com/embed/oy2zDJPIgwc?start=5",
+        "https://www.youtube.com/embed/Pb4nRgwQ5Jk?start=535",
+        "https://www.youtube.com/embed/n3EiRynr1Us?start=9"
+      ],
       "traits": [
         "Clear forms like sonata-allegro and rondo.",
         "Balanced textures with homophonic accompaniment.",
@@ -26,7 +35,11 @@
       "id": 3,
       "title": "Romantic Era",
       "subtitle": "Expressive, emotional, and rich with personal storytelling.",
-      "audio": "https://www.youtube.com/embed/7X8j3xHqu7o",
+      "audios": [
+        "https://www.youtube.com/embed/rEGOihjqO9w?start=8",
+        "https://www.youtube.com/embed/2Q_DzWUvcL8?start=6",
+        "https://www.youtube.com/embed/AgXW-57UDMc?start=26"
+      ],
       "traits": [
         "Expanded orchestra and dramatic crescendos.",
         "Freer forms and intense emotional content.",

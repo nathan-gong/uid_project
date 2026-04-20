@@ -7,20 +7,24 @@
       <div class="card-body">
         <h2>{{ lesson.title }}</h2>
         <p class="text-secondary">{{ lesson.subtitle }}</p>
-        <p class="mb-3"><strong>Instructions:</strong> Listen to the example, then review the important traits listed
-          below.</p>
-
-        <div class="ratio ratio-16x9 mb-4">
-          <iframe src="{{ lesson.audio }}" title="{{ lesson.title }} audio" allowfullscreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-
         <h5>Important Traits</h5>
         <ul>
           {% for trait in lesson.traits %}
           <li>{{ trait }}</li>
           {% endfor %}
         </ul>
+
+        <div class="row mb-4">
+          {% for audio in lesson.audios %}
+          <div class="col-md-4 mb-3">
+            <div class="ratio ratio-16x9">
+              <iframe src="{{ audio }}" title="{{ lesson.title }} audio {{ loop.index }}" allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
       </div>
       <div class="card-footer d-flex justify-content-between">
         {% if prev_id %}
