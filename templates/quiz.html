@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-9">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2>Quiz Question {{ question.id }}</h2>
+        <p class="text-secondary">Read the prompt, listen carefully, then choose the best answer.</p>
+        <p class="mb-4"><strong>{{ question.question }}</strong></p>
+
+        <div class="ratio ratio-16x9 mb-4">
+          <iframe src="{{ question.audio }}" title="Quiz audio" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+
+        <form method="post">
+          <div class="mb-3">
+            {% for option in question.options %}
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="choice" id="choice{{ loop.index }}"
+                value="{{ option }}" required>
+              <label class="form-check-label" for="choice{{ loop.index }}">{{ option }}</label>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            {% if prev_id %}
+            <a href="{{ url_for('quiz', question_id=prev_id) }}" class="btn btn-outline-secondary">&laquo; Back</a>
+            {% else %}
+            <div></div>
+            {% endif %}
+            <button type="submit" class="btn btn-primary">Submit Answer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

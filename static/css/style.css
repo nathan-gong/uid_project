@@ -1,0 +1,11 @@
+body {
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+footer {
+  font-size: 0.9rem;
+}

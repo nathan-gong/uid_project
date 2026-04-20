@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-9">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h2>{{ lesson.title }}</h2>
+        <p class="text-secondary">{{ lesson.subtitle }}</p>
+        <p class="mb-3"><strong>Instructions:</strong> Listen to the example, then review the important traits listed
+          below.</p>
+
+        <div class="ratio ratio-16x9 mb-4">
+          <iframe src="{{ lesson.audio }}" title="{{ lesson.title }} audio" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+
+        <h5>Important Traits</h5>
+        <ul>
+          {% for trait in lesson.traits %}
+          <li>{{ trait }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="card-footer d-flex justify-content-between">
+        {% if prev_id %}
+        <a href="{{ url_for('learn', lesson_id=prev_id) }}" class="btn btn-outline-secondary">&laquo; Previous</a>
+        {% else %}
+        <div></div>
+        {% endif %}
+
+        {% if next_id %}
+        <a href="{{ url_for('learn', lesson_id=next_id) }}" class="btn btn-primary">Next Lesson &raquo;</a>
+        {% else %}
+        <a href="{{ url_for('quiz', question_id=next_quiz_id) }}" class="btn btn-success">Start Quiz</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

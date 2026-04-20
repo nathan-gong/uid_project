@@ -1,0 +1,75 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Baroque Era",
+      "subtitle": "An ornate world of drama, counterpoint, and trumpet fanfares.",
+      "audio": "https://www.youtube.com/embed/ZcS4t0QV_j0",
+      "traits": [
+        "Rich ornamentation and complex polyphonic textures.",
+        "Strong contrasts and dramatic dynamics.",
+        "Use of basso continuo and elaborate vocal lines."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Classical Era",
+      "subtitle": "Balanced phrasing, clear structure, and elegant melodies.",
+      "audio": "https://www.youtube.com/embed/5xTZt7g54x8",
+      "traits": [
+        "Clear forms like sonata-allegro and rondo.",
+        "Balanced textures with homophonic accompaniment.",
+        "Melodies that are graceful, simple, and memorable."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Romantic Era",
+      "subtitle": "Expressive, emotional, and rich with personal storytelling.",
+      "audio": "https://www.youtube.com/embed/7X8j3xHqu7o",
+      "traits": [
+        "Expanded orchestra and dramatic crescendos.",
+        "Freer forms and intense emotional content.",
+        "Use of expressive harmony and colorful orchestration."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "question": "This excerpt features a bright trumpet theme and rapid ornamented lines that feel dramatic and detailed. Which era does it most likely represent?",
+      "audio": "https://www.youtube.com/embed/ZcS4t0QV_j0",
+      "options": [
+        "Baroque",
+        "Classical",
+        "Romantic",
+        "Modern"
+      ],
+      "correct_answer": "Baroque"
+    },
+    {
+      "id": 2,
+      "question": "The music is elegant with a graceful melody, tidy phrasing, and a calm, regular rhythm. Which era has this style?",
+      "audio": "https://www.youtube.com/embed/5xTZt7g54x8",
+      "options": [
+        "Romantic",
+        "Classical",
+        "Baroque",
+        "Contemporary"
+      ],
+      "correct_answer": "Classical"
+    },
+    {
+      "id": 3,
+      "question": "This piece builds with dramatic emotion, lush harmonies, and a sweeping orchestral sound. Which era is the best fit?",
+      "audio": "https://www.youtube.com/embed/7X8j3xHqu7o",
+      "options": [
+        "Classical",
+        "Baroque",
+        "Minimalist",
+        "Romantic"
+      ],
+      "correct_answer": "Romantic"
+    }
+  ]
+}
