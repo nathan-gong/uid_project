@@ -4,6 +4,7 @@ import json
 import os
 
 app = Flask(__name__)
+app.secret_key = "replace-this-with-a-secure-key"
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "content.json")
 
