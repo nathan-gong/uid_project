@@ -3,19 +3,28 @@
 {% block content %}
 <div class="row justify-content-center">
   <div class="col-lg-9">
-    <div class="card shadow-sm">
-      <div class="card-body">
         <h2>Quiz Question {{ question.id }}</h2>
         <p class="text-secondary">Read the prompt, listen carefully, then choose the best answer.</p>
         <p class="mb-4"><strong>{{ question.question }}</strong></p>
 
+        {% if question.type != 'multi' %}
         <div class="ratio ratio-16x9 mb-4">
           <iframe src="{{ question.audio }}" title="Quiz audio" allowfullscreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
+        {% endif %}
 
         <form method="post">
           <div class="mb-3">
+            {% if question.type == 'multi' %}
+            <p class="mb-2"><strong>Select all that apply:</strong></p>
+            {% for option in question.options %}
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="choice" id="choice{{ loop.index }}" value="{{ option }}">
+              <label class="form-check-label" for="choice{{ loop.index }}">{{ option }}</label>
+            </div>
+            {% endfor %}
+            {% else %}
             {% for option in question.options %}
             <div class="form-check">
               <input class="form-check-input" type="radio" name="choice" id="choice{{ loop.index }}"
@@ -23,6 +32,7 @@
               <label class="form-check-label" for="choice{{ loop.index }}">{{ option }}</label>
             </div>
             {% endfor %}
+            {% endif %}
           </div>
           <div class="d-flex justify-content-between align-items-center">
             {% if prev_id %}
@@ -33,8 +43,6 @@
             <button type="submit" class="btn btn-primary">Submit Answer</button>
           </div>
         </form>
-      </div>
-    </div>
   </div>
 </div>
 {% endblock %}

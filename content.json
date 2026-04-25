@@ -57,7 +57,8 @@
         "Classical",
         "Romantic"
       ],
-      "correct_answer": "Romantic"
+      "correct_answer": "Romantic",
+      "explanation": "Tchaikovsky's Swan Lake ballet is a perfect example of Romantic storytelling. The sweeping melodies convey deep emotion, the lush orchestration paints vivid scenes of drama and romance, and the emotional intensity captivates listeners—all core values of the Romantic era."
     },
     {
       "id": 2,
@@ -68,7 +69,8 @@
         "Classical",
         "Romantic"
       ],
-      "correct_answer": "Classical"
+      "correct_answer": "Classical",
+      "explanation": "Mozart's Symphony No. 40 showcases Classical elegance: balanced phrasing, clear harmonic structure, and a memorable yet refined melody. Unlike the ornate complexity of the Baroque or the emotional excess of the Romantic, this piece exemplifies the Classical ideal of clarity and proportion."
     },
     {
       "id": 3,
@@ -79,7 +81,8 @@
         "Classical",
         "Romantic"
       ],
-      "correct_answer": "Baroque"
+      "correct_answer": "Baroque",
+      "explanation": "Bach's Cello Suite No. 1 is the epitome of Baroque polyphony and contrapuntal mastery. Notice the intricate interweaving of melodic lines, the ornamental embellishments, and the mathematical precision—Bach's genius for complex musical architecture is unmistakably Baroque."
     },
     {
       "id": 4,
@@ -90,7 +93,8 @@
         "Classical",
         "Romantic"
       ],
-      "correct_answer": "Romantic"
+      "correct_answer": "Romantic",
+      "explanation": "Liszt's Hungarian Rhapsody epitomizes Romantic virtuosity and nationalism. The lightning-fast piano passages showcase technical brilliance, dramatic contrasts between soft and thunderous moments build intensity, and the folk-inspired themes celebrate Hungarian cultural pride—all hallmarks of the Romantic spirit."
     },
     {
       "id": 5,
@@ -101,7 +105,62 @@
         "Classical",
         "Romantic"
       ],
-      "correct_answer": "Baroque"
+      "correct_answer": "Baroque",
+      "explanation": "Vivaldi's Violin Concerto in A Minor showcases essential Baroque features: rapid virtuosic passages that dazzle the ear, the ritornello form where the main theme alternates with contrasting episodes, and rhythmic vitality. This structure and energy are quintessentially Baroque."
+    },
+    {
+      "id": 6,
+      "type": "multi",
+      "question": "Select all traits that match Baroque style.",
+      "options": [
+        "Highly ornamented melodies",
+        "Clear, balanced phrasing",
+        "Ritornello form",
+        "Emotional nationalism",
+        "Complex contrapuntal textures"
+      ],
+      "correct_answer": [
+        "Highly ornamented melodies",
+        "Ritornello form",
+        "Complex contrapuntal textures"
+      ],
+      "explanation": "Baroque music often uses ornate melodic decoration, ritornello form in concertos, and tightly woven contrapuntal textures. The other traits are more typical of Classical or Romantic styles."
+    },
+    {
+      "id": 7,
+      "type": "multi",
+      "question": "Select all traits that match Classical style.",
+      "options": [
+        "Simple, memorable melodies",
+        "Balanced forms and phrasing",
+        "Dense polyphony",
+        "Formal symmetry",
+        "Virtuosic piano showmanship"
+      ],
+      "correct_answer": [
+        "Simple, memorable melodies",
+        "Balanced forms and phrasing",
+        "Formal symmetry"
+      ],
+      "explanation": "Classical music emphasizes clear structure, balanced phrasing, and formal symmetry. It generally avoids the dense polyphony of Baroque music and the dramatic virtuosity of Romantic showpieces."
+    },
+    {
+      "id": 8,
+      "type": "multi",
+      "question": "Select all traits that match Romantic style.",
+      "options": [
+        "Lush orchestration",
+        "Strict, symmetrical phrasing",
+        "Dramatic emotional contrast",
+        "Nationalistic folk influences",
+        "Baroque counterpoint"
+      ],
+      "correct_answer": [
+        "Lush orchestration",
+        "Dramatic emotional contrast",
+        "Nationalistic folk influences"
+      ],
+      "explanation": "Romantic music often uses rich orchestration, dramatic emotional contrasts, and sometimes nationalistic folk-inspired themes. The other listed traits belong more clearly to Classical or Baroque traditions."
     }
   ]
 }

@@ -23,6 +23,12 @@ def _init_session():
     }
 
 
+def _is_answer_correct(answer):
+    if isinstance(answer["correct_answer"], list):
+        return sorted(answer["selected"]) == sorted(answer["correct_answer"])
+    return answer["selected"] == answer["correct_answer"]
+
+
 @app.route("/")
 def index():
     _init_session()
@@ -71,7 +77,10 @@ def quiz(question_id):
         session.modified = True
 
     if request.method == "POST":
-        selected = request.form.get("choice")
+        if question.get("type") == "multi":
+            selected = request.form.getlist("choice")
+        else:
+            selected = request.form.get("choice")
         entry = {
             "question_id": question_id,
             "selected": selected,
@@ -103,7 +112,7 @@ def quiz(question_id):
 @app.route("/results")
 def results():
     answers = [item for item in session["activity"]["quiz_answers"] if "selected" in item]
-    score = sum(1 for answer in answers if answer["selected"] == answer["correct_answer"])
+    score = sum(1 for answer in answers if _is_answer_correct(answer))
     total = len(answers)
 
     return render_template(

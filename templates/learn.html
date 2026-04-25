@@ -3,8 +3,6 @@
 {% block content %}
 <div class="row justify-content-center">
   <div class="col-lg-9">
-    <div class="card mb-4 shadow-sm">
-      <div class="card-body">
         <h2>{{ lesson.title }}</h2>
         <p class="text-secondary">{{ lesson.subtitle }}</p>
         <h5>Important Traits</h5>
@@ -25,8 +23,7 @@
           {% endfor %}
         </div>
 
-      </div>
-      <div class="card-footer d-flex justify-content-between">
+      <div class="d-flex justify-content-between mt-4">
         {% if prev_id %}
         <a href="{{ url_for('learn', lesson_id=prev_id) }}" class="btn btn-outline-secondary">&laquo; Previous</a>
         {% else %}
@@ -39,7 +36,6 @@
         <a href="{{ url_for('quiz', question_id=next_quiz_id) }}" class="btn btn-success">Start Quiz</a>
         {% endif %}
       </div>
-    </div>
   </div>
 </div>
 {% endblock %}

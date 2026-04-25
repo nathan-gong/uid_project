@@ -1,20 +1,20 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="card shadow-sm">
-  <div class="card-body text-center">
-    <h1 class="card-title mb-3">Musical Eras Explorer</h1>
+<div class="text-center">
+  <h1 class="mb-3">Musical Eras Explorer</h1>
     <p class="lead">Learn how to recognize Baroque, Classical, and Romantic musical traits, then test yourself with a
       short quiz.</p>
-    <p class="mb-4">Music changes over time because each era reflects its culture, technology, and artistic trends.
-      Different styles emerge as musicians experiment with new ideas, emotions, and ways of expression. The instruments
-      available also shape the sound. Together, these factors create the unique “feel” that defines each musical
-      period.</p>
     <div class="mb-4">
       <img src="https://jadebultitude.b-cdn.net/wp-content/uploads/2023/02/periods-of-music-timeline-1024x409.png"
         alt="Timeline of musical periods" class="img-fluid rounded shadow-sm">
     </div>
+    <ul class="list-unstyled mb-4 text-start" style="max-width: 500px; margin-left: auto; margin-right: auto;">
+      <li class="mb-2"><strong>Culture & Technology</strong> - Each era reflects its time's values, tools, and innovations</li>
+      <li class="mb-2"><strong>Artistic Expression</strong> - Composers experiment with new ideas and emotional depths</li>
+      <li class="mb-2"><strong>Sonic Identity</strong> - Available instruments and techniques shape each period's unique sound</li>
+    </ul>
     <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-lg btn-primary mt-3">Start Lesson</a>
-  </div>
+    <p class="text-muted small mt-4">Created by Nathan Gong</p>
 </div>
 {% endblock %}
