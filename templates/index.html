@@ -2,18 +2,33 @@
 
 {% block content %}
 <div class="text-center">
-  <h1 class="mb-3">Musical Eras Explorer</h1>
+  <h1 class="display-3 fw-bold mb-3">Musical Eras Explorer</h1>
     <p class="lead">Learn how to recognize Baroque, Classical, and Romantic musical traits, then test yourself with a
       short quiz.</p>
     <div class="mb-4">
       <img src="https://jadebultitude.b-cdn.net/wp-content/uploads/2023/02/periods-of-music-timeline-1024x409.png"
         alt="Timeline of musical periods" class="img-fluid rounded shadow-sm">
     </div>
-    <ul class="list-unstyled mb-4 text-start" style="max-width: 500px; margin-left: auto; margin-right: auto;">
-      <li class="mb-2"><strong>Culture & Technology</strong> - Each era reflects its time's values, tools, and innovations</li>
-      <li class="mb-2"><strong>Artistic Expression</strong> - Composers experiment with new ideas and emotional depths</li>
-      <li class="mb-2"><strong>Sonic Identity</strong> - Available instruments and techniques shape each period's unique sound</li>
-    </ul>
+    <div class="row mb-4">
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <strong class="fs-5">Culture & Technology</strong>
+          <p class="small text-muted">Each era reflects its time's values, tools, and innovations</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <strong class="fs-5">Artistic Expression</strong>
+          <p class="small text-muted">Composers experiment with new ideas and emotional depths</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="mb-3">
+          <strong class="fs-5">Sonic Identity</strong>
+          <p class="small text-muted">Available instruments and techniques shape each period's unique sound</p>
+        </div>
+      </div>
+    </div>
     <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-lg btn-primary mt-3">Start Lesson</a>
     <p class="text-muted small mt-4">Created by Nathan Gong</p>
 </div>

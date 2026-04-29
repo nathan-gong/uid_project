@@ -17,13 +17,15 @@
         <form method="post">
           <div class="mb-3">
             {% if question.type == 'multi' %}
-            <p class="mb-2"><strong>Select all that apply:</strong></p>
-            {% for option in question.options %}
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="choice" id="choice{{ loop.index }}" value="{{ option }}">
-              <label class="form-check-label" for="choice{{ loop.index }}">{{ option }}</label>
+            <div class="text-center mb-2"><strong>Select all that apply:</strong></div>
+            <div class="mx-auto" style="max-width: 400px;">
+              {% for option in question.options %}
+              <div class="form-check mb-2 text-start">
+                <input class="form-check-input me-2" type="checkbox" name="choice" id="choice{{ loop.index }}" value="{{ option }}">
+                <label class="form-check-label mb-0" for="choice{{ loop.index }}">{{ option }}</label>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
             {% else %}
             {% for option in question.options %}
             <div class="form-check">
