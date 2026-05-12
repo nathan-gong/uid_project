@@ -40,3 +40,9 @@ This repository contains a Flask web application for a UI design class project. 
 - `content.json` — lesson and quiz content data
 - `templates/` — HTML templates for the app
 - `static/css/style.css` — custom styling
+
+## Team members
+
+Nathan Gong
+- CUID: ng2695
+- GitHub username: nathan-gong
